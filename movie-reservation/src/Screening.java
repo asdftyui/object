@@ -22,4 +22,8 @@ public class Screening {
     public Money getMovieFee() {
         return movie.getFee();
     }
+
+    private Money calculateFee(int audienceCount) {
+        return movie.calculateMovieFree(this).times(audienceCount);
+    }
 }
